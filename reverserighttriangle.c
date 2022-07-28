@@ -1,13 +1,17 @@
 #include <stdio.h>
 
-int main(){
-
-    for(int i = 4;i>=1;i--){
-        for(int j = 0;j<i;j++){
+void ReversedRightTriangle(int i){
+    for(int row = i;row>=1;row--){
+        for(int column = 0;column<row;column++){
             printf("*");
         }
         printf("\n");
     }
+}
 
+int main(){
+
+
+    ReversedRightTriangle(7);
     return 0;
 }

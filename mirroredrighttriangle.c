@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-int main(){
-
-    for(int row = 1;row<=4;row++){
-        for(int column = 1;column<=4;column++){
-            if(column>=5-row && column<=4){
+void MirrorRightTriangle(int i){
+    for(int row = 1;row<=i;row++){
+        for(int column = 1;column<=i;column++){
+            if(column>=i-row && column<=i){
                  printf("*");
             }
             else{
@@ -13,6 +12,9 @@ int main(){
         }
         printf("\n");
     }
+}
 
+int main(){
+    MirrorRightTriangle(6);
     return 0;
 }
