@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-int main(){
-
-    for(int row = 1;row<=8;row++){
-        for(int column = 1;column<=8;column++){
-            if(column == 1  || row==1 || column==9-row ){
+void HollowInvertedTriangle(int i){
+    for(int row = 1;row<=i;row++){
+        for(int column = 1;column<=i;column++){
+            if(column == 1  || row==1 || column==(i+1)-row ){
                 printf("*");
             }
             else{
@@ -13,5 +12,9 @@ int main(){
         }
         printf("\n");
     }
+}
+
+int main(){
+    HollowInvertedTriangle(8);
     return 0;
 }

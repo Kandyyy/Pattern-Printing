@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-int main(){
-
-    for(int row = 1;row<=6;row++){
-        for(int column = 1;column<=6;column++){
-            if(column == 1 || row==column || row==6){
+void HollowRightTriangle(int i){
+    for(int row = 1;row<=i;row++){
+        for(int column = 1;column<=i;column++){
+            if(column == 1 || row==column || row==i){
                 printf("*");
             }
             else{
@@ -13,6 +12,9 @@ int main(){
         }
         printf("\n");
     }
+}
 
+int main(){
+    HollowRightTriangle(20);
     return 0;
 }

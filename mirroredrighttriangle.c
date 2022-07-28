@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 void MirrorRightTriangle(int i){
-    for(int row = 1;row<=i;row++){
-        for(int column = 1;column<=i;column++){
+    for(int row = 0;row<=i;row++){
+        for(int column = 0;column<=i;column++){
             if(column>=i-row && column<=i){
                  printf("*");
             }
@@ -15,6 +15,6 @@ void MirrorRightTriangle(int i){
 }
 
 int main(){
-    MirrorRightTriangle(6);
+    MirrorRightTriangle(7);
     return 0;
 }
